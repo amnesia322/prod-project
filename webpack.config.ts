@@ -1,8 +1,6 @@
 import path from 'path';
-import webpack from 'webpack';
-import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-import { type BuildEnv, type BuildPaths } from './config/build/types/config';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
+import { BuildEnv, BuildPaths } from './config/build/types/config';
 
 export default (env: BuildEnv) => {
     const paths: BuildPaths = {
@@ -13,20 +11,14 @@ export default (env: BuildEnv) => {
     };
 
     const mode = env.mode || 'development';
-    const isDev = mode === 'development';
     const PORT = env.port || 3000;
 
-    const config: webpack.Configuration = buildWebpackConfig({
+    const isDev = mode === 'development';
+
+    return buildWebpackConfig({
         mode,
         paths,
         isDev,
         port: PORT,
     });
-
-    if (isDev) {
-        config.plugins.push(new ReactRefreshPlugin());
-        config.plugins.push(new webpack.HotModuleReplacementPlugin());
-    }
-
-    return config;
 };
