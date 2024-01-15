@@ -31,6 +31,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'off',
+        'no-console': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'off',
@@ -51,6 +52,7 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
+        'no-param-reassign': 'off',
     },
     globals: {
         __IS_DEV__: true,

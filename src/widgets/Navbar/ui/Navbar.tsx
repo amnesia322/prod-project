@@ -28,8 +28,9 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
             </Button>
             {/* eslint-disable-next-line i18next/no-literal-string */}
             <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                {/* eslint-disable-next-line max-len */}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda consequuntur dolores, eaque eveniet explicabo illum iusto quas rem reprehenderit sapiente soluta voluptate voluptates! Accusantium illo maiores mollitia similique ullam.
+                {/* eslint-disable-next-line i18next/no-literal-string */}
+                {/* eslint-disable-next-line */}
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </Modal>
         </div>
     );
